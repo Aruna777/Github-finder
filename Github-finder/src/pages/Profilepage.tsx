@@ -7,7 +7,6 @@ import {
 import { UserCard } from "../components/Usercard";
 import { StatsBar } from "../components/Statsbar";
 import { RepoList } from "../components/Repolist";
-import { FollowerList } from "../components/Followerlist";
 import { ErrorMessage } from "../components/Errormessage";
 import { SearchBar } from "../components/Searchbar";
 
@@ -29,7 +28,6 @@ export function ProfilePage() {
           <UserCard user={user} />
           <StatsBar user={user} />
           <RepoList />
-          <FollowerList />
         </>
       )}
     </div>

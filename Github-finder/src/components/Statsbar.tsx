@@ -1,4 +1,5 @@
 import type { GitHubUser } from "../api/GithubApi";
+import "../pages/Profilepage.css";
 
 interface StatsBarProps {
   user: GitHubUser;
@@ -6,22 +7,18 @@ interface StatsBarProps {
 
 export function StatsBar({ user }: StatsBarProps) {
   return (
-    <div className="stats-bar">
+    <div className="stats">
       <div className="stat">
-        <span className="label">Repositories</span>
-        <span className="value">{user.public_repos}</span>
+        <div className="snum">{user.public_repos}</div>
+        <div className="slbl">Repos</div>
       </div>
       <div className="stat">
-        <span className="label">Followers</span>
-        <span className="value">{user.followers}</span>
+        <div className="snum">{user.followers}</div>
+        <div className="slbl">Followers</div>
       </div>
       <div className="stat">
-        <span className="label">Following</span>
-        <span className="value">{user.following}</span>
-      </div>
-      <div className="stat">
-        <span className="label">Member Since</span>
-        <span className="value">{new Date(user.created_at).getFullYear()}</span>
+        <div className="snum">{user.following}</div>
+        <div className="slbl">Following</div>
       </div>
     </div>
   );
