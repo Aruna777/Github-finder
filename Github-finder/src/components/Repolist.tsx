@@ -50,15 +50,22 @@ export function RepoList() {
             <div>No repositories found</div>
           )}
           {repos.length > 0 && (
-            <div className="repos-container">
-              {repos.map((repo) => (
-                <RepoCard key={repo.id} repo={repo} />
-              ))}
+            <div>
+              <div className="rname">
+                {repos.map((repo) => (
+                  <RepoCard key={repo.id} repo={repo} />
+                ))}
+              </div>
             </div>
           )}
         </div>
       )}
 
+      {/* <div className="repos-container">
+                {repos.map((repo) => (
+                  <RepoCard key={repo.id} repo={repo} />
+                ))}
+              </div> */}
       {activeTab === "followers" && (
         <div className="follower-list">
           {followersLoading && <div>Loading followers...</div>}
